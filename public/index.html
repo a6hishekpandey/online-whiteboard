@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Whiteboard for instant collaboration</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header flex flex-jc-sb flex-ai-c">
+            <div class="header__text-container item flex flex-jc-c flex-ai-c">
+                <div>
+                    <h2>Online whiteboard</h2>
+                    <span>Developed by Abhishek</span>
+                </div>
+                <div class="separator"></div>
+                <div>
+                    <img class="paint-brush header__btn" src="./img/paintbrush.png" alt="">
+                </div>
+            </div>
+            <div class="header__btn-container item flex flex-jc-c flex-ai-c">
+                <img class="header__btn undo-btn" src="./img/undo.png" alt="">
+                <img class="header__btn redo-btn" src="./img/redo.png" alt="">
+                <div class="separator"></div>
+                <a class="share-btn" href="#">Share</a>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__tools flex flex-jc-sb flex-ai-c">
+                <div class="pencil-container">
+                    <img class="pencil" src="./img/pencil.png" alt="">
+                    <div class="pencil-controls hide">
+                        <input class="thickness-slider pencil-thickness" type="range" name="pencil-slider" min="2" max="10" value="3">
+                        <div class="color-list flex flex-jc-sb flex-ai-c">
+                            <div class="#db4437 red color"></div>
+                            <div class="#2d9bf0 blue color"></div>
+                            <div class="#1a1a1a black color"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="eraser-container">
+                    <img class="eraser" src="./img/eraser.png" alt="">
+                    <div class="eraser-controls flex flex-jc-sb flex-ai-c hide">
+                        <input class="thickness-slider eraser-thickness" type="range" name="eraser-slider" min="5" max="20" value="7">
+                    </div>
+                </div>
+                <img class="download" src="./img/download.png" alt="" srcset="">
+                <img class="image" src="./img/image.png" alt="" srcset="">
+                <img class="sticky-note-btn" src="./img/sticky-note.png" alt="" srcset="">
+            </div>
+            <div class="share-popup flex flex-jc-c flex-ai-c hide">
+                <h2>Online whiteboard is better <br> when you are togeather</h2>
+                <p>Share this link with other people.</p>
+                <span></span>
+                <div class="link flex flex-jc-c flex-ai-c">
+                    <input class="link-text" type="text" disabled>
+                </div>
+                <a class="copy-link-btn" href="#">Copy link</a>
+                <div class="close-popup-btn flex flex-ai-c flex-jc-c"><img src="./img/close.png" alt=""></div>
+            </div>
+            <div class="overlay hide"></div>
+            <canvas></canvas>
+        </main>
+    </div>
+    <div class="message flex flex-jc-c flex-ai-c hide">
+        <p>Whiteboard currently works only on Desktop View</p>
+    </div>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+    <script>let socket = io.connect("https://onlinewhiteboard-0922.herokuapp.com/");</script>
+    <script src="./js/script.js"></script>
+    <script src="./js/canvas.js"></script>
+</body>
+</html>
