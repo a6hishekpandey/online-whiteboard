@@ -1,7 +1,7 @@
 
 # Online Whiteboard
 
-This is a web application used for instant collaboration without signing-up. It has all basic features of a virtual whiteboard other than that it also supports live board sharing with real-time editing. Link: https://onlinewhiteboard-0922.herokuapp.com/
+This is a web application used for instant collaboration without signing up. It has all the basic features of a virtual whiteboard other than that it also supports live board sharing with real-time editing. Link: https://onlinewhiteboard-0922.herokuapp.com/
 
 
 ## Installation
